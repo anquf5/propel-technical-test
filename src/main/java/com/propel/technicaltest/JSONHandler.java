@@ -1,7 +1,6 @@
 package com.propel.technicaltest;
 
 import com.google.gson.Gson;
-
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -9,9 +8,7 @@ import java.util.List;
 public class JSONHandler {
 
     private IOHandler ioHandler;
-
     private List<User> users;
-
 
     public JSONHandler(IOHandler ioHandler) throws IOException {
         this.ioHandler = ioHandler;
@@ -39,6 +36,7 @@ public class JSONHandler {
 
     public void addUser(User user) throws IOException {
         users.add(user);
+        ioHandler.IOWriter(users);
     }
 
 

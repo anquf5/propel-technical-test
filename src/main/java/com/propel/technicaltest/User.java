@@ -1,10 +1,10 @@
 package com.propel.technicaltest;
 
 public class User {
-    private String first_name;
-    private String last_name;
-    private String phone;
-    private String email;
+    private String first_name = null;
+    private String last_name = null;
+    private String phone = null;
+    private String email = null;
 
     public User(String first_name, String last_name, String phone, String email) {
         this.first_name = first_name;
@@ -12,6 +12,8 @@ public class User {
         this.phone = phone;
         this.email = email;
     }
+
+    public User() {}
 
     public String getFirst_name() {
         return first_name;
@@ -45,13 +47,4 @@ public class User {
         this.email = email;
     }
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "first_name='" + first_name + '\'' +
-                ", last_name='" + last_name + '\'' +
-                ", phone='" + phone + '\'' +
-                ", email='" + email + '\'' +
-                '}';
-    }
 }
