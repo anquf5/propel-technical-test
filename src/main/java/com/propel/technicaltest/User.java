@@ -1,10 +1,10 @@
 package com.propel.technicaltest;
 
 public class User {
-    private String first_name = null;
-    private String last_name = null;
-    private String phone = null;
-    private String email = null;
+    private String first_name;
+    private String last_name;
+    private String phone;
+    private String email;
 
     public User(String first_name, String last_name, String phone, String email) {
         this.first_name = first_name;
