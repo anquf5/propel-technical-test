@@ -1,10 +1,7 @@
 package com.propel.technicaltest;
 
 import com.google.gson.JsonObject;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.stereotype.Controller;
 
 import java.io.IOException;
 import java.util.List;
@@ -40,7 +37,7 @@ public class UserController {
     // Edit user
     @PutMapping("{id}")
     public JsonObject editUser(
-            @PathVariable Integer id,
+            @PathVariable int id,
             @RequestBody userRequest request
     ) throws IOException {
         return jsonHandler.editUser(
@@ -61,7 +58,7 @@ public class UserController {
 
     // Delete user
     @DeleteMapping("{id}")
-    public JsonObject deleteUser(@PathVariable Integer id) throws IOException {
+    public JsonObject deleteUser(@PathVariable int id) throws IOException {
         return jsonHandler.deleteUser(id);
     }
 

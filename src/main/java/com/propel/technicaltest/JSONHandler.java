@@ -9,9 +9,9 @@ import java.util.List;
 @Service
 public class JSONHandler {
 
-    private IOHandler ioHandler;
-    private List<User> users;
-    private Gson gson = new Gson();
+    private final IOHandler ioHandler;
+    private final List<User> users;
+    private final Gson gson = new Gson();
 
     public JSONHandler(IOHandler ioHandler) throws IOException {
         this.ioHandler = ioHandler;
@@ -45,9 +45,7 @@ public class JSONHandler {
                 response.addProperty("msg", gson.toJson(e.getMessage()));
             }
         }
-        finally {
-            return response;
-        }
+        return response;
     }
 
 
@@ -64,9 +62,8 @@ public class JSONHandler {
             ioHandler.IOWriter(users);
         }catch (Exception e){
             response.addProperty("msg", gson.toJson(e.getMessage()));
-        }finally {
-            return response;
         }
+        return response;
     }
 
     // Edit
@@ -99,9 +96,8 @@ public class JSONHandler {
             else{
                 response.addProperty("msg", gson.toJson(e.getMessage()));
             }
-        }finally {
-            return response;
         }
+        return response;
     }
 
     // Delete
@@ -122,8 +118,7 @@ public class JSONHandler {
             else{
                 response.addProperty("msg", gson.toJson(e.getMessage()));
             }
-        }finally {
-            return response;
         }
+        return response;
     }
 }

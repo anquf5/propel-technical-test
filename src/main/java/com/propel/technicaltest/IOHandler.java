@@ -10,7 +10,7 @@ import java.util.List;
 public class IOHandler{
     private final String filename = System.getProperty("user.dir") + "\\src\\main\\java\\users.json";
 
-    private Gson gson = new Gson();
+    private final Gson gson = new Gson();
 
     public IOHandler() {}
 

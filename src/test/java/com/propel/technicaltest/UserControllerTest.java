@@ -45,12 +45,6 @@ public class UserControllerTest {
     }
 
     @Test
-    @Rollback
-    public void testRollBack() throws IOException {
-        ioHandler.IOWriter(users);
-    }
-
-    @Test
     public void itShouldListAllUsers() throws Exception{
         this.mockMvc.perform(MockMvcRequestBuilders.get("/list"))
                 .andDo(print())
