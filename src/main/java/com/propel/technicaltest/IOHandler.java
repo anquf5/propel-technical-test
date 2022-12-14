@@ -8,7 +8,9 @@ import java.util.List;
 
 @Configuration
 public class IOHandler{
-    public final String filename = System.getProperty("user.dir") + "\\src\\main\\java\\users.json";
+    private final String filename = System.getProperty("user.dir") + "\\src\\main\\java\\users.json";
+
+    private Gson gson = new Gson();
 
     public IOHandler() {}
 
@@ -18,7 +20,6 @@ public class IOHandler{
         * @return User
         */
     public List<User> IOReader() throws IOException {
-        Gson gson = new Gson();
         BufferedReader br = new BufferedReader(new FileReader(filename));
         List<User> users = Arrays.asList(gson.fromJson(br, User[].class));
         br.close();
@@ -31,9 +32,7 @@ public class IOHandler{
         * @return void
         */
     public void IOWriter(List<User> users) throws IOException{
-        Gson gson = new Gson();
         BufferedWriter bw = new BufferedWriter(new FileWriter(filename));
-        System.out.println(gson.toJson(users));
         bw.write(gson.toJson(users));
         bw.flush();
         bw.close();
