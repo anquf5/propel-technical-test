@@ -9,18 +9,18 @@ JDK 19
 SpringBoot 3.0
 
 # File Structure
-├───src
-│   ├───main
-│   │   ├───java
-│   │   │   └───com
-│   │   │       └───propel
-│   │   │           └───technicaltest
-│   │   └───resources
-│   └───test
-│       └───java
-│           └───com
-│               └───propel
-│                   └───technicaltest
+├───src  
+│   ├───main  
+│   │   ├───java  
+│   │   │   └───com  
+│   │   │       └───propel  
+│   │   │           └───technicaltest  
+│   │   └───resources  
+│   └───test  
+│       └───java  
+│           └───com  
+│               └───propel  
+│                   └───technicaltest  
 
 # API Documentation
  
