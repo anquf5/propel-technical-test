@@ -32,9 +32,9 @@ Return:
  - List
 
 ### /view/{id}
-Description: View an user
-Method: GET
-Param:
+Description: View an user  
+Method: GET  
+Param:  
 
  - id - Integer
 
@@ -42,10 +42,10 @@ Return:
  - JsonObject
 
 ### /add
-Description: Add a new user
-Method: POST
-Param:
-Body:
+Description: Add a new user  
+Method: POST  
+Param:  
+Body:  
 
  - firstName - String
  - lastName - String
@@ -56,9 +56,9 @@ Return:
  - JsonObject
 
 ### /{id}
-Description: Edit a user
-Method: PUT
-Param: 
+Description: Edit a user  
+Method: PUT  
+Param:   
 
  - id - Integer
 
@@ -72,12 +72,12 @@ Body:
 Return: 
  - JsonObject
 
-### /{id}
-Description: Delete a user
-Method: DELETE
-Param:
+### /{id}  
+Description: Delete a user  
+Method: DELETE  
+Param:  
 
  - id - Integer
 
-Return: 
+Return:   
  - JsonObject
