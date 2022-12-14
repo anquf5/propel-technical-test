@@ -25,9 +25,9 @@ SpringBoot 3.0
 # API Documentation
  
 ### /list
-Description: List all the users
-Method: GET
-Param: 
+Description: List all the users  
+Method: GET  
+Param:   
 Return:   
  - List
 
